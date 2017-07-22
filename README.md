@@ -3,5 +3,5 @@
 Code and exercise answers for Metaprogramming Elixir
 
 TODO:
-* Exploration ch. 4
+* Exploration ch. 5
 

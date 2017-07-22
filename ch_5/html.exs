@@ -39,7 +39,7 @@ defmodule Html do
 
   defmacro tag(name, attrs \\ [], do: inner) do
     quote do
-      put_buffer(var!)
+      put_buffer(var!(buffer, Html), open_tag(unquote_splicing([name, attrs])))
       unquote(postwalk(inner))
       put_buffer(var!(buffer, Html), unquote("</#{name}>"))
     end
